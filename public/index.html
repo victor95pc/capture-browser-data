@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Capture</title>
+    <script type="application/javascript">
+      var request = new XMLHttpRequest();
+      request.open('POST', '/capture', true);
+      request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+      request.send(JSON.stringify({ "screenSize": [window.screen.availWidth, window.screen.availHeight], "userAgent": navigator.userAgent }));
+    </script>
+  </head>
+
+  <body>
+    <p>OK</p>
+  </body>
+</html>
