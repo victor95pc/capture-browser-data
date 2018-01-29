@@ -28,7 +28,7 @@ fastify.post('/capture', function (request, reply) {
   });
 })
 
-fastify.listen(3000, '127.0.0.1', function (err) {
+fastify.listen(80, '127.0.0.1', function (err) {
   if (err) throw err
   console.log(`server listening on ${fastify.server.address().port}`);
 })
