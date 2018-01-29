@@ -1,8 +1,8 @@
 const fastify = require('fastify')();
 const path    = require('path');
 const fetch   = require('node-fetch');
-const port    = process.env.PORT || 3000;
 
+const PORT   = process.env.PORT || 3000;
 const WEBDIS = "http://35.196.211.117";
 
 let saveCapturedData = function (capturedData) {
@@ -29,7 +29,7 @@ fastify.post('/capture', function (request, reply) {
   });
 })
 
-fastify.listen(port, function (err) {
+fastify.listen(PORT, '0.0.0.0', function (err) {
   if (err) throw err
   console.log(`server listening on ${fastify.server.address().port}`);
 })
